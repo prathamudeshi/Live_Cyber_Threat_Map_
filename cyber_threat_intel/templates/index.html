@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threat Intelligence Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        #threats {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+        .threat-entry {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #news, #malicious_ips {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cyber Threat Intelligence Dashboard</h1>
+    <h2>Live Threat Data Stream</h2>
+    <div id="threats"></div>
+    <button onclick="fetchNews()">Fetch News</button>
+    <button onclick="fetchMaliciousIPs()">Fetch Malicious IPs</button>
+    <div id="news"></div>
+    <div id="malicious_ips"></div>
+
+    <script>
+        const threatsDiv = document.getElementById('threats');
+        const newsDiv = document.getElementById('news');
+        const maliciousIPsDiv = document.getElementById('malicious_ips');
+
+        // Handle SSE for threat data
+        const source = new EventSource('/threats');
+        source.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            if (data.length > 0) {
+                data.forEach(threat => {
+                    const entry = document.createElement('div');
+                    entry.className = 'threat-entry';
+                    entry.textContent = `Attack: ${threat['Attack Name']} | From: ${threat['Source Country Name']} (${threat['Source Country Code']}) | To: ${threat['Destination Country Name']} (${threat['Destination Country Code']}) | Count: ${threat['Attack Count']} | Types: ${threat['Attack Types'].join(', ')} | Time: ${threat['Timestamp']}`;
+                    threatsDiv.prepend(entry);
+                });
+            }
+        };
+        source.onerror = function() {
+            console.error('SSE error occurred');
+        };
+
+        // Fetch news data
+        async function fetchNews() {
+            try {
+                const response = await fetch('/news');
+                const data = await response.json();
+                newsDiv.innerHTML = '<h3>News Articles</h3>';
+                if (data.error) {
+                    newsDiv.innerHTML += `<p>Error: ${data.error}</p>`;
+                    return;
+                }
+                data.forEach(article => {
+                    const p = document.createElement('p');
+                    p.innerHTML = `<a href="${article.link}" target="_blank">${article.title}</a> (${article.timestamp})`;
+                    newsDiv.appendChild(p);
+                });
+            } catch (error) {
+                newsDiv.innerHTML = `<p>Error fetching news: ${error}</p>`;
+            }
+        }
+
+        // Fetch malicious IPs
+        async function fetchMaliciousIPs() {
+            try {
+                const response = await fetch('/malicious_ips');
+                const data = await response.json();
+                maliciousIPsDiv.innerHTML = '<h3>Malicious IPs</h3>';
+                if (data.error) {
+                    maliciousIPsDiv.innerHTML += `<p>Error: ${data.error}</p>`;
+                    return;
+                }
+                data.forEach(ip => {
+                    const p = document.createElement('p');
+                    p.textContent = `IP: ${ip.ip} | Type: ${ip.type} | Lat: ${ip.latitude || 'N/A'}, Lon: ${ip.longitude || 'N/A'}`;
+                    maliciousIPsDiv.appendChild(p);
+                });
+            } catch (error) {
+                maliciousIPsDiv.innerHTML = `<p>Error fetching IPs: ${error}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+[
+  {
+    "title": "New Self-Spreading Malware Infects Docker Containers to Mine Dero Cryptocurrency",
+    "link": "https://thehackernews.com/2025/05/new-self-spreading-malware-infects.html",
+    "timestamp": "Tue, 27 May 2025 21:53:00 +0530"
+  },
+  {
+    "title": "Cybercriminals Clone Antivirus Site to Spread Venom RAT and Steal Crypto Wallets",
+    "link": "https://thehackernews.com/2025/05/cybercriminals-clone-antivirus-site-to_4.html",
+    "timestamp": "Tue, 27 May 2025 19:40:00 +0530"
+  },
+  {
+    "title": "Russian Hackers Breach 20+ NGOs Using Evilginx Phishing via Fake Microsoft Entra Pages",
+    "link": "https://thehackernews.com/2025/05/russian-hackers-breach-20-ngos-using.html",
+    "timestamp": "Tue, 27 May 2025 17:21:00 +0530"
+  },
+  {
+    "title": "Russia-Linked Hackers Target Tajikistan Government with Weaponized Word Documents",
+    "link": "https://thehackernews.com/2025/05/russia-linked-hackers-target-tajikistan.html",
+    "timestamp": "Tue, 27 May 2025 12:24:00 +0530"
+  },
+  {
+    "title": "Over 70 Malicious npm and VS Code Packages Found Stealing Data and Crypto",
+    "link": "https://thehackernews.com/2025/05/over-70-malicious-npm-and-vs-code.html",
+    "timestamp": "Mon, 26 May 2025 19:47:00 +0530"
+  },
+  {
+    "title": "\u26a1 Weekly Recap: APT Campaigns, Browser Hijacks, AI Malware, Cloud Breaches and Critical CVEs",
+    "link": "https://thehackernews.com/2025/05/weekly-recap-apt-campaigns-browser.html",
+    "timestamp": "Mon, 26 May 2025 14:53:00 +0530"
+  },
+  {
+    "title": "Hackers Use Fake VPN and Browser NSIS Installers to Deliver Winos 4.0 Malware",
+    "link": "https://thehackernews.com/2025/05/hackers-use-fake-vpn-and-browser-nsis.html",
+    "timestamp": "Sun, 25 May 2025 13:06:00 +0530"
+  },
+  {
+    "title": "Hackers Use TikTok Videos to Distribute Vidar and StealC Malware via ClickFix Technique",
+    "link": "https://thehackernews.com/2025/05/hackers-use-tiktok-videos-to-distribute.html",
+    "timestamp": "Fri, 23 May 2025 22:54:00 +0530"
+  },
+  {
+    "title": "ViciousTrap Uses Cisco Flaw to Build Global Honeypot from 5,300 Compromised Devices",
+    "link": "https://thehackernews.com/2025/05/vicioustrap-uses-cisco-flaw-to-build.html",
+    "timestamp": "Fri, 23 May 2025 18:19:00 +0530"
+  },
+  {
+    "title": "300 Servers and \u20ac3.5M Seized as Europol Strikes Ransomware Networks Worldwide",
+    "link": "https://thehackernews.com/2025/05/300-servers-and-35m-seized-as-europol.html",
+    "timestamp": "Fri, 23 May 2025 16:15:00 +0530"
+  },
+  {
+    "title": "SafeLine WAF: Open Source Web Application Firewall with Zero-Day Detection and Bot Protection",
+    "link": "https://thehackernews.com/2025/05/safeline-waf-open-source-web.html",
+    "timestamp": "Fri, 23 May 2025 16:00:00 +0530"
+  },
+  {
+    "title": "U.S. Dismantles DanaBot Malware Network, Charges 16 in $50M Global Cybercrime Operation",
+    "link": "https://thehackernews.com/2025/05/us-dismantles-danabot-malware-network.html",
+    "timestamp": "Fri, 23 May 2025 12:33:00 +0530"
+  },
+  {
+    "title": "CISA Warns of Suspected Broader SaaS Attacks Exploiting App Secrets and Cloud Misconfigs",
+    "link": "https://thehackernews.com/2025/05/cisa-warns-of-suspected-broader-saas.html",
+    "timestamp": "Fri, 23 May 2025 10:46:00 +0530"
+  },
+  {
+    "title": "GitLab Duo Vulnerability Enabled Attackers to Hijack AI Responses with Hidden Prompts",
+    "link": "https://thehackernews.com/2025/05/gitlab-duo-vulnerability-enabled.html",
+    "timestamp": "Fri, 23 May 2025 10:04:00 +0530"
+  },
+  {
+    "title": "Chinese Hackers Exploit Trimble Cityworks Flaw to Infiltrate U.S. Government Networks",
+    "link": "https://thehackernews.com/2025/05/chinese-hackers-exploit-trimble.html",
+    "timestamp": "Thu, 22 May 2025 20:36:00 +0530"
+  },
+  {
+    "title": "Critical Windows Server 2025 dMSA Vulnerability Enables Active Directory Compromise",
+    "link": "https://thehackernews.com/2025/05/critical-windows-server-2025-dmsa.html",
+    "timestamp": "Thu, 22 May 2025 18:05:00 +0530"
+  },
+  {
+    "title": "Chinese Hackers Exploit Ivanti EPMM Bugs in Global Enterprise Network Attacks",
+    "link": "https://thehackernews.com/2025/05/chinese-hackers-exploit-ivanti-epmm.html",
+    "timestamp": "Thu, 22 May 2025 17:37:00 +0530"
+  },
+  {
+    "title": "Identity Security Has an Automation Problem\u2014And It's Bigger Than You Think",
+    "link": "https://thehackernews.com/2025/05/identity-security-has-automation.html",
+    "timestamp": "Thu, 22 May 2025 16:41:00 +0530"
+  },
+  {
+    "title": "Critical Versa Concerto Flaws Let Attackers Escape Docker and Compromise Hosts",
+    "link": "https://thehackernews.com/2025/05/unpatched-versa-concerto-flaws-let.html",
+    "timestamp": "Thu, 22 May 2025 16:36:00 +0530"
+  },
+  {
+    "title": "FBI and Europol Disrupt Lumma Stealer Malware Network Linked to 10 Million Infections",
+    "link": "https://thehackernews.com/2025/05/fbi-and-europol-disrupt-lumma-stealer.html",
+    "timestamp": "Thu, 22 May 2025 13:54:00 +0530"
+  },
+  {
+    "title": "PureRAT Malware Spikes 4x in 2025, Deploying PureLogs to Target Russian Firms",
+    "link": "https://thehackernews.com/2025/05/purerat-malware-spikes-4x-in-2025.html",
+    "timestamp": "Wed, 21 May 2025 18:40:00 +0530"
+  },
+  {
+    "title": "Securing CI/CD workflows with Wazuh",
+    "link": "https://thehackernews.com/2025/05/securing-cicd-workflows-with-wazuh.html",
+    "timestamp": "Wed, 21 May 2025 16:55:00 +0530"
+  },
+  {
+    "title": "Researchers Expose PWA JavaScript Attack That Redirects Users to Adult Scam Apps",
+    "link": "https://thehackernews.com/2025/05/researchers-expose-pwa-javascript.html",
+    "timestamp": "Wed, 21 May 2025 14:31:00 +0530"
+  },
+  {
+    "title": "Google Chrome's Built-in Manager Lets Users Update Breached Passwords with One Click",
+    "link": "https://thehackernews.com/2025/05/google-chrome-can-now-auto-change.html",
+    "timestamp": "Wed, 21 May 2025 12:41:00 +0530"
+  },
+  {
+    "title": "Hazy Hawk Exploits DNS Records to Hijack CDC, Corporate Domains for Malware Delivery",
+    "link": "https://thehackernews.com/2025/05/hazy-hawk-exploits-dns-records-to.html",
+    "timestamp": "Tue, 20 May 2025 21:23:00 +0530"
+  },
+  {
+    "title": "The Crowded Battle: Key Insights from the 2025 State of Pentesting Report",
+    "link": "https://thehackernews.com/2025/05/the-crowded-battle-key-insights-from.html",
+    "timestamp": "Tue, 20 May 2025 16:30:00 +0530"
+  },
+  {
+    "title": "South Asian Ministries Hit by SideWinder APT Using Old Office Flaws and Custom Malware",
+    "link": "https://thehackernews.com/2025/05/south-asian-ministries-hit-by.html",
+    "timestamp": "Tue, 20 May 2025 16:27:00 +0530"
+  },
+  {
+    "title": "Chinese Hackers Deploy MarsSnake Backdoor in Multi-Year Attack on Saudi Organization",
+    "link": "https://thehackernews.com/2025/05/chinese-hackers-deploy-marssnake.html",
+    "timestamp": "Tue, 20 May 2025 15:02:00 +0530"
+  },
+  {
+    "title": "Go-Based Malware Deploys XMRig Miner on Linux Hosts via Redis Configuration Abuse",
+    "link": "https://thehackernews.com/2025/05/go-based-malware-deploys-xmrig-miner-on.html",
+    "timestamp": "Tue, 20 May 2025 13:55:00 +0530"
+  },
+  {
+    "title": "Malicious PyPI Packages Exploit Instagram and TikTok APIs to Validate User Accounts",
+    "link": "https://thehackernews.com/2025/05/malicious-pypi-packages-exploit.html",
+    "timestamp": "Tue, 20 May 2025 11:19:00 +0530"
+  },
+  {
+    "title": "RVTools Official Site Hacked to Deliver Bumblebee Malware via Trojanized Installer",
+    "link": "https://thehackernews.com/2025/05/rvtools-official-site-hacked-to-deliver.html",
+    "timestamp": "Mon, 19 May 2025 21:18:00 +0530"
+  },
+  {
+    "title": "Ransomware Gangs Use Skitnet Malware for Stealthy Data Theft and Remote Access",
+    "link": "https://thehackernews.com/2025/05/ransomware-gangs-use-skitnet-malware.html",
+    "timestamp": "Mon, 19 May 2025 20:08:00 +0530"
+  },
+  {
+    "title": "Why CTEM is the Winning Bet for CISOs in 2025",
+    "link": "https://thehackernews.com/2025/05/why-ctem-is-winning-bet-for-cisos-in.html",
+    "timestamp": "Mon, 19 May 2025 16:30:00 +0530"
+  },
+  {
+    "title": "Firefox Patches 2 Zero-Days Exploited at Pwn2Own Berlin with $100K in Rewards",
+    "link": "https://thehackernews.com/2025/05/firefox-patches-2-zero-days-exploited.html",
+    "timestamp": "Mon, 19 May 2025 16:07:00 +0530"
+  },
+  {
+    "title": "\u26a1 Weekly Recap: Zero-Day Exploits, Insider Threats, APT Targeting, Botnets and More",
+    "link": "https://thehackernews.com/2025/05/weekly-recap-zero-day-exploits-insider.html",
+    "timestamp": "Mon, 19 May 2025 15:30:00 +0530"
+  },
+  {
+    "title": "New HTTPBot Botnet Launches 200+ Precision DDoS Attacks on Gaming and Tech Sectors",
+    "link": "https://thehackernews.com/2025/05/new-httpbot-botnet-launches-200.html",
+    "timestamp": "Fri, 16 May 2025 17:07:00 +0530"
+  },
+  {
+    "title": "Top 10 Best Practices for Effective Data Protection",
+    "link": "https://thehackernews.com/2025/05/top-10-best-practices-for-effective.html",
+    "timestamp": "Fri, 16 May 2025 16:00:00 +0530"
+  },
+  {
+    "title": "Researchers Expose New Intel CPU Flaws Enabling Memory Leaks and Spectre v2 Attacks",
+    "link": "https://thehackernews.com/2025/05/researchers-expose-new-intel-cpu-flaws.html",
+    "timestamp": "Fri, 16 May 2025 14:38:00 +0530"
+  },
+  {
+    "title": "Fileless Remcos RAT Delivered via LNK Files and MSHTA in PowerShell-Based Attacks",
+    "link": "https://thehackernews.com/2025/05/fileless-remcos-rat-delivered-via-lnk.html",
+    "timestamp": "Fri, 16 May 2025 13:26:00 +0530"
+  },
+  {
+    "title": "DragonForce Ransomware Strikes MSP in Supply Chain Attack",
+    "link": "https://www.darkreading.com/application-security/dragonforce-ransomware-msp-supply-chain-attack",
+    "timestamp": "Tue, 27 May 2025 20:15:31 GMT"
+  },
+  {
+    "title": "MathWorks, Creator of MATLAB, Confirms Ransomware Attack",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/mathworks-confirms-ransomware-attack",
+    "timestamp": "Tue, 27 May 2025 17:27:19 GMT"
+  },
+  {
+    "title": "FBI: Silent Ransom Group Adopts Vishing Campaign Against Law Firms",
+    "link": "https://www.darkreading.com/endpoint-security/fbi-silent-ransom-group-vishing-law-firms",
+    "timestamp": "Tue, 27 May 2025 16:58:22 GMT"
+  },
+  {
+    "title": "CVE Uncertainty Underlines Importance of Cyber Resilience",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/cve-uncertainty-underlines-importance-cyber-resilience",
+    "timestamp": "Tue, 27 May 2025 14:00:00 GMT"
+  },
+  {
+    "title": "3 Critical Pillars of Cyber-Resilience",
+    "link": "https://www.darkreading.com/cyber-risk/three-critical-pillars-of-cyber-resilience",
+    "timestamp": "Fri, 23 May 2025 16:33:26 GMT"
+  },
+  {
+    "title": "How AI Is Transforming SASE, Zero Trust for Modern Enterprises",
+    "link": "https://www.darkreading.com/cybersecurity-operations/how-ai-transform-sase-zero-trust-networks-security",
+    "timestamp": "Fri, 23 May 2025 14:06:01 GMT"
+  },
+  {
+    "title": "Companies Look to AI to Tame the Chaos of Event Security, Operations",
+    "link": "https://www.darkreading.com/threat-intelligence/companies-ai-tame-chaos-event-security-operations",
+    "timestamp": "Fri, 23 May 2025 13:00:00 GMT"
+  },
+  {
+    "title": "Following Data Breach, Multiple Stalkerware Apps Go Offline",
+    "link": "https://www.darkreading.com/threat-intelligence/following-data-breach-stalkerware-apps-offline",
+    "timestamp": "Thu, 22 May 2025 20:59:32 GMT"
+  },
+  {
+    "title": "3AM Ransomware Adopts Email Bombing, Vishing Combo Attack",
+    "link": "https://www.darkreading.com/threat-intelligence/3am-ransomware-adopts-email-bombing-vishing",
+    "timestamp": "Thu, 22 May 2025 19:30:23 GMT"
+  },
+  {
+    "title": "Blurring Lines Between Scattered Spider &amp; Russian Cybercrime",
+    "link": "https://www.darkreading.com/cyberattacks-data-breaches/blurring-lines-scattered-spider-russian-cybercrime",
+    "timestamp": "Thu, 22 May 2025 15:56:21 GMT"
+  },
+  {
+    "title": "Security Threats of Open Source AI Exposed by DeepSeek",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/security-threats-open-source-ai-deepseek",
+    "timestamp": "Thu, 22 May 2025 14:00:00 GMT"
+  },
+  {
+    "title": "GitLab's AI Assistant Opened Devs to Code Theft",
+    "link": "https://www.darkreading.com/application-security/gitlab-ai-assistant-opened-devs-to-code-theft",
+    "timestamp": "Thu, 22 May 2025 10:00:00 GMT"
+  },
+  {
+    "title": "Lumma Stealer Takedown Reveals Sprawling Operation",
+    "link": "https://www.darkreading.com/cybersecurity-operations/lumma-stealer-takedown-sprawling-operation",
+    "timestamp": "Wed, 21 May 2025 21:51:17 GMT"
+  },
+  {
+    "title": "Ivanti EPMM Exploitation Tied to Previous Zero-Day Attacks",
+    "link": "https://www.darkreading.com/cyberattacks-data-breaches/ivanti-epmm-exploitation-previous-zero-day-attacks",
+    "timestamp": "Wed, 21 May 2025 21:24:57 GMT"
+  },
+  {
+    "title": "Marks &amp; Spencer Projects Cyberattack Cost of $400M",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/marks-spencer-400m-loss-after-cyberattack",
+    "timestamp": "Wed, 21 May 2025 21:01:48 GMT"
+  },
+  {
+    "title": "Unimicron, Presto Attacks Mark Industrial Ransomware Surge",
+    "link": "https://www.darkreading.com/ics-ot-security/unimicron-presto-attacks-industrial-ransomware-surge",
+    "timestamp": "Wed, 21 May 2025 19:36:03 GMT"
+  },
+  {
+    "title": "Coinbase Breach Compromises Nearly 70K Customers' Information",
+    "link": "https://www.darkreading.com/threat-intelligence/coinbase-breach-compromises-70k-customers",
+    "timestamp": "Wed, 21 May 2025 16:27:54 GMT"
+  },
+  {
+    "title": "Unpatched Windows Server Flaw Threatens Active Directory Users",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/unpatched-windows-server-flaw-threatens-active-directory-users",
+    "timestamp": "Wed, 21 May 2025 16:01:24 GMT"
+  },
+  {
+    "title": "NIST's 'LEV' Equation to Determine Likelihood a Bug Was Exploited",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/nist-lev-equation-determine-likelihood-bug-exploited",
+    "timestamp": "Wed, 21 May 2025 15:26:31 GMT"
+  },
+  {
+    "title": "Asia Produces More APT Actors, as Focus Expands Globally",
+    "link": "https://www.darkreading.com/cyber-risk/asia-apt-actors-focus-expands-globally",
+    "timestamp": "Wed, 21 May 2025 01:00:00 GMT"
+  },
+  {
+    "title": "Virgin Media 02 Vuln Exposes Call Recipient Location",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/virgin-media-02-call-recipient-location",
+    "timestamp": "Tue, 20 May 2025 18:41:36 GMT"
+  },
+  {
+    "title": "Tenable Adds Third-Party Connectors to Exposure Management Platform",
+    "link": "https://www.darkreading.com/cyber-risk/tenable-third-party-connectors-exposure-management",
+    "timestamp": "Tue, 20 May 2025 18:04:17 GMT"
+  },
+  {
+    "title": "Bumblebee Malware Takes Flight via Trojanized VMware Utility",
+    "link": "https://www.darkreading.com/cyberattacks-data-breaches/bumblebee-malware-trojanized-vmware-utility",
+    "timestamp": "Tue, 20 May 2025 16:21:00 GMT"
+  },
+  {
+    "title": "Large Retailers Land in Scattered Spider's Ransomware Web",
+    "link": "https://www.darkreading.com/threat-intelligence/large-retailers-scattered-spider-ransomware-web",
+    "timestamp": "Tue, 20 May 2025 15:27:36 GMT"
+  },
+  {
+    "title": "Why Rigid Security Programs Keep Failing",
+    "link": "https://www.darkreading.com/vulnerabilities-threats/rigid-security-programs-fail",
+    "timestamp": "Tue, 20 May 2025 14:00:00 GMT"
+  },
+  {
+    "title": "Novel Phishing Attack Combines AES With Poisoned npm Packages",
+    "link": "https://www.darkreading.com/threat-intelligence/novel-phishing-attack-combines-aes-npm-packages",
+    "timestamp": "Tue, 20 May 2025 14:00:00 GMT"
+  },
+  {
+    "title": "'Operation RoundPress' Targets Ukraine in XSS Webmail Attacks",
+    "link": "https://www.darkreading.com/threat-intelligence/operation-roundpress-ukraine-xss-webmail-attacks",
+    "timestamp": "Mon, 19 May 2025 21:20:04 GMT"
+  },
+  {
+    "title": "S. Dakota CIO Gottumukkala Signs on as CISA Deputy Director",
+    "link": "https://www.darkreading.com/threat-intelligence/gottumukkala-cisa-deputy-director",
+    "timestamp": "Mon, 19 May 2025 19:13:39 GMT"
+  },
+  {
+    "title": "Legal Aid Agency Warns Lawyers, Defendants on Data Breach",
+    "link": "https://www.darkreading.com/remote-workforce/legal-aid-agency-data-breach",
+    "timestamp": "Mon, 19 May 2025 18:38:52 GMT"
+  },
+  {
+    "title": "CVE Disruption Threatens Foundations of Defensive Security",
+    "link": "https://www.darkreading.com/threat-intelligence/cve-disruption-threatens-foundations-defensive-security",
+    "timestamp": "Mon, 19 May 2025 14:00:00 GMT"
+  },
+  {
+    "title": "[Virtual Event] Strategic Security for the Modern Enterprise",
+    "link": "https://www.darkreading.com/events/-virtual-event-strategic-security-for-the-modern-enterprise",
+    "timestamp": "2025-05-27T20:45:54.250232"
+  },
+  {
+    "title": "Australian Human Rights Commission Leaks Docs in Data Breach",
+    "link": "https://www.darkreading.com/application-security/australian-human-rights-commission-leaks-data-breach",
+    "timestamp": "Fri, 16 May 2025 19:50:48 GMT"
+  },
+  {
+    "title": "Crores Lost in Trading Scam, Mastermind Held in Dehradun",
+    "link": "https://the420.in/interstate-cyber-fraud-kingpin-arrested-dehradun-abans-investment-scam/",
+    "timestamp": "Tue, 27 May 2025 15:39:58 +0000"
+  },
+  {
+    "title": "Global Cyber Raid: \u20b9190 Cr Ransomware Network Crushed Were You A Target?",
+    "link": "https://the420.in/global-ransomware-network-crack-down-300-servers/",
+    "timestamp": "Tue, 27 May 2025 06:15:04 +0000"
+  },
+  {
+    "title": "QR Code Scam Hits the Streets: New Cyber Threat Taps Into Real-World Emotions",
+    "link": "https://the420.in/qr-code-phishing-scam-lamppost-quishing-rise-public-threat/",
+    "timestamp": "Tue, 27 May 2025 05:56:14 +0000"
+  },
+  {
+    "title": "Adidas Falls Victim to Cyberattack Amid Retail Industry Wave",
+    "link": "https://the420.in/adidas-cyberattack-data-breach-hits-retail-sector-globally/",
+    "timestamp": "Tue, 27 May 2025 05:42:45 +0000"
+  },
+  {
+    "title": "Deepfake Alert! Trump\u2019s Hotel Scam Isn\u2019t a Reality Show, It\u2019s a Cyber Nightmare-Know More to Stay Safe",
+    "link": "https://the420.in/ai-trump-deepfake-investment-scam-karnataka-cybercrime/",
+    "timestamp": "Mon, 26 May 2025 16:01:11 +0000"
+  },
+  {
+    "title": "Insider Bribery? Coinbase Faces INR 3,300 Crore Cyberattack Blow",
+    "link": "https://the420.in/insider-bribery-coinbase-faces-400m-cyberattack-blow/",
+    "timestamp": "Mon, 26 May 2025 14:27:34 +0000"
+  },
+  {
+    "title": "Cyberattack via Picture? No OTP, No Link\u2014Hackers Just Need One WhatsApp Image Now",
+    "link": "https://the420.in/whatsapp-image-scam-malware-hackers-cyber-attack-warning/",
+    "timestamp": "Mon, 26 May 2025 12:59:57 +0000"
+  },
+  {
+    "title": "Top 10 Daily Cybercrime Brief by FCRF [26.05.2025]: Click here to Know More",
+    "link": "https://the420.in/top-10-daily-cybercrime-brief-by-fcrf-click-here-to-know-more-256/",
+    "timestamp": "Mon, 26 May 2025 05:50:29 +0000"
+  }
+]
