@@ -97,7 +97,7 @@ const FlipTile: React.FC<FlipTileProps> = ({
                 href={currentNews.source}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                className="text-xs text-blue-400 hover:text-blue-300 transition-colors cursor-pointer"
               >
                 Source
               </a>
@@ -512,12 +512,7 @@ const News: React.FC<NewsProps> = ({ useSSE = false, itemsPerPage = 3 }) => {
     }
   }, [newsItems.length, itemsPerPage]);
 
-  // Initialize displayed items
-  useEffect(() => {
-    if (displayedItems.length === 0) {
-      setDisplayedItems(currentItems);
-    }
-  }, [currentItems]);
+
 
   const visiblePages = getVisiblePages();
 

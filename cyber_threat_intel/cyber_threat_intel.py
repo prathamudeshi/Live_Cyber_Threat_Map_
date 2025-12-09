@@ -10,7 +10,7 @@ import os
 from datetime import datetime
 from ipaddress import ip_address
 import pycountry
-from typing import Dict, List, Set, Optional, AsyncGenerator
+from typing import Dict, List, Set, Optional, AsyncGenerator, Any
 from collections import deque
 from aiohttp.client_exceptions import ClientError
 import geoip2.database
@@ -246,6 +246,7 @@ class ThreatDataCollector(BaseDataCollector):
                 grouped_attacks[key] = {
                     "Attack Count": 0,
                     "Attack Types": set(),
+                    "Severities": set(),
                     "Source Country Code": item["Source Country Code"],
                     "Source Country Name": item["Source Country Name"],
                     "Source Latitude": item.get("Source Latitude"),
@@ -256,12 +257,35 @@ class ThreatDataCollector(BaseDataCollector):
                     "Destination Longitude": item.get("Destination Longitude"),
                     "Timestamp": item["Timestamp"]
                 }
-            grouped_attacks[key]["Attack Count"] += item.get("Attack Count", 1) or 1
-            grouped_attacks[key]["Attack Types"].add(item["Attack Type"])
+            
+            # Aggregate counts
+            count = item.get("Attack Count", 1)
+            # Handle case where count might be None or invalid
+            if not isinstance(count, (int, float)):
+                count = 1
+            grouped_attacks[key]["Attack Count"] += int(count)
+            
+            # Aggregate types and severities
+            if item.get("Attack Type"):
+                grouped_attacks[key]["Attack Types"].add(item["Attack Type"])
+            if item.get("Severity"):
+                grouped_attacks[key]["Severities"].add(item["Severity"])
         
         # Step 4: Convert to final list
-        final_data = [
-            {
+        final_data = []
+        for data in grouped_attacks.values():
+            # Determine highest severity for the group
+            severities = data["Severities"]
+            if "Critical" in severities:
+                final_severity = "Critical"
+            elif "High" in severities:
+                final_severity = "High"
+            elif "Medium" in severities:
+                final_severity = "Medium"
+            else:
+                final_severity = "Low"
+
+            final_data.append({
                 "Source Country Code": data["Source Country Code"],
                 "Source Country Name": data["Source Country Name"],
                 "Source Latitude": data["Source Latitude"],
@@ -272,13 +296,23 @@ class ThreatDataCollector(BaseDataCollector):
                 "Destination Longitude": data["Destination Longitude"],
                 "Attack Count": data["Attack Count"],
                 "Attack Types": list(data["Attack Types"]),
+                "Severity": final_severity,
                 "Timestamp": data["Timestamp"]
-            }
-            for data in grouped_attacks.values()
-        ]
+            })
         
         logger.info(f"{self.source_name}: Returning {len(final_data)} preprocessed threat entries")
         return final_data
+
+    def _infer_severity(self, attack_name: Optional[str], attack_type: Optional[str]) -> str:
+        """Infer severity based on attack name and type keywords."""
+        text = f"{attack_name or ''} {attack_type or ''}".lower()
+        if any(x in text for x in ["ransomware", "execution", "critical", "cve-", "remote code", "overflow"]):
+            return "Critical"
+        if any(x in text for x in ["exploit", "injection", "botnet", "backdoor", "trojan", "sql", "xss", "malware"]):
+            return "High"
+        if any(x in text for x in ["scanner", "brute", "denial", "ddos", "dos", "phishing", "spam", "reconnaissance"]):
+            return "Medium"
+        return "Low"
 
     async def _fetch_fortiguard(self) -> List[Dict]:
         url = "https://fortiguard.fortinet.com/api/threatmap/live/outbreak"
@@ -312,6 +346,7 @@ class ThreatDataCollector(BaseDataCollector):
                     "Source Latitude": attack.get("src_lat"),
                     "Source Longitude": attack.get("src_long"),
                     "Timestamp": datetime.utcnow().isoformat() if not attack.get("timestamp") else attack.get("timestamp"),
+                    "Severity": attack.get("severity") or self._infer_severity(attack.get("vuln_name"), attack.get("vuln_type"))
                 }
                 parsed_data.append(entry)
         logger.debug(f"fortiguard: Collected {len(parsed_data)} entries")
@@ -358,6 +393,9 @@ class ThreatDataCollector(BaseDataCollector):
                                     threat_data["Source Country Name"] = self.get_country_name(threat_data.get("Source Country Code"))
                                     if not threat_data.get("Timestamp"):
                                         threat_data["Timestamp"] = datetime.utcnow().isoformat()
+                                    
+                                    # Infer severity
+                                    threat_data["Severity"] = self._infer_severity(threat_data.get("Attack Name"), threat_data.get("Attack Type"))
                                     threat_data_list.append(threat_data)
                             except json.JSONDecodeError as e:
                                 logger.warning(f"checkpoint: Failed to parse JSON: {decoded_line}, error: {e}")
@@ -397,7 +435,8 @@ class ThreatDataCollector(BaseDataCollector):
                     "Source Country Name": self.get_country_name(src_cc),
                     "Source Latitude": self.get_country_coordinates(code=src_cc, coord_type="lat"),
                     "Source Longitude": self.get_country_coordinates(code=src_cc, coord_type="long"),
-                    "Timestamp": attack.get("attackTime") or datetime.utcnow().isoformat()
+                    "Timestamp": attack.get("attackTime") or datetime.utcnow().isoformat(),
+                    "Severity": self._infer_severity(attack.get("type"), attack.get("type"))
                 }
                 parsed_data.append(entry)
         logger.debug(f"radware: Collected {len(parsed_data)} entries")
@@ -632,6 +671,7 @@ class ThreatIntelligenceAggregator:
     """Aggregates data from threat, news, and IP collectors."""
     def __init__(self):
         self.threat_collector = ThreatDataCollector(
+            # sources=["fortiguard"],
             sources=["fortiguard", "checkpoint", "radware"],
             interval=10.0
         )

@@ -40,4 +40,8 @@ export interface MaliciousIP {
   longitude: number;
   timestamp: Date;
   severity: AttackSeverity;
+  country_code?: string;
+  city?: string;
+  isp?: string;
+  usageType?: string;
 }
