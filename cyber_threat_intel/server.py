@@ -268,15 +268,16 @@ async def analyze_ip():
 @app.route('/api/briefing', methods=['GET'])
 async def get_briefing():
     """Generate an AI Threat Briefing using Gemini."""
-    import google.generativeai as genai
+    import os
+    from groq import Groq
     
-    api_key = os.getenv('GOOGLE_API_KEY')
+    api_key = os.getenv('GROQ_API_KEY')
     
     # simulation/fallback
     if not api_key:
         return jsonify({
             "is_simulation": True,
-            "summary": "SIMULATION: No Google API Key found. Showing cached intelligence.",
+            "summary": "SIMULATION: No Groq API Key found. Showing cached intelligence.",
             "points": [
                 "Significant increase in SSH brute force attempts detected from Eastern Europe.",
                 "New ransomware variant targeting healthcare institutions reported in global news feeds.",
@@ -319,17 +320,34 @@ async def get_briefing():
         }}
         """
         
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.5-flash')
-        response = model.generate_content(prompt)
+        client = Groq(api_key=api_key)
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+            model="llama-3.3-70b-versatile",
+            response_format={"type": "json_object"},
+        )
         
-        # Clean markdown formatting if present
-        text = response.text.replace('```json', '').replace('```', '')
+        text = chat_completion.choices[0].message.content
         return jsonify(json.loads(text))
 
     except Exception as e:
-        logger.error(f"Gemini Error: {e}")
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"Gemini Error (likely quota): {e}")
+        # Fallback to simulation data on error
+        return jsonify({
+            "is_simulation": True,
+            "summary": "INTELLIGENCE ALERT: Live AI service unavailable (Quota Exceeded). Displaying historical patterns.",
+            "points": [
+                "Persistent APT29 activity detected in sector 4. (Historical)",
+                "Known ransomware signatures matching LockBit 3.0 observed. (Historical)",
+                "Unusual outbound traffic spikes on UDP port 53. (Historical)"
+            ],
+            "risk_level": "Medium"
+        })
 
 if __name__ == "__main__":
     try:

@@ -91,7 +91,9 @@ export const generateReport = (attacks: Attack[], ips: MaliciousIP[], briefing: 
 
   const ipRows = ips.map(ip => [
     ip.ip,
-    `${ip.latitude.toFixed(2)},${ip.longitude.toFixed(2)}`,
+    ip.latitude && ip.longitude 
+      ? `${ip.latitude.toFixed(2)},${ip.longitude.toFixed(2)}` 
+      : 'N/A',
     ip.severity,
     ip.country_code || 'UNK'
   ]);

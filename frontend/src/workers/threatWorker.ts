@@ -12,7 +12,6 @@ interface RawSSEThreat {
   "Destination Longitude": number | null;
   "Attack Count": number;
   "Attack Types": string[];
-  "Severity": string;
   Timestamp: string;
 }
 
@@ -20,13 +19,14 @@ interface RawSSEThreat {
 const convertSSEToAttack = (rawThreat: RawSSEThreat): Attack => {
   // Helper function to map severity string to enum
   const mapSeverity = (severity: string): AttackSeverity => {
-    if (!severity) return AttackSeverity.UNKNOWN;
-    const s = severity.toLowerCase();
-    if (s === "critical") return AttackSeverity.CRITICAL;
-    if (s === "high") return AttackSeverity.HIGH;
-    if (s === "medium") return AttackSeverity.MEDIUM;
-    if (s === "low") return AttackSeverity.LOW;
-    return AttackSeverity.UNKNOWN;
+    const severityMap: { [key: string]: AttackSeverity } = {
+      "1": AttackSeverity.LOW,
+      "2": AttackSeverity.LOW,
+      "3": AttackSeverity.MEDIUM,
+      "4": AttackSeverity.HIGH,
+      "5": AttackSeverity.CRITICAL,
+    };
+    return severityMap[severity] || AttackSeverity.UNKNOWN;
   };
 
   // Create source country object
@@ -50,7 +50,7 @@ const convertSSEToAttack = (rawThreat: RawSSEThreat): Attack => {
     source,
     target,
     type: rawThreat["Attack Types"] as AttackType[],
-    severity: mapSeverity(rawThreat["Severity"]),
+    severity: mapSeverity(rawThreat["Attack Count"]?.toString() || "0"),
     timestamp: new Date(rawThreat["Timestamp"]),
   };
 };

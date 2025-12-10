@@ -309,12 +309,12 @@ function Dashboard() {
         error={analysisError}
         ipAddress={analysisData?.ip}
       />
-      {/* <div className="flex justify-between items-center mt-6 mb-2">
+      <div className="flex justify-between items-center mt-6 mb-2">
          <h1 className="text-2xl font-bold font-mono tracking-tight text-slate-100 uppercase">Live Intelligence Feed</h1>
          <button onClick={handleExport} className="flex gap-2 items-center bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg text-white font-bold transition-all shadow-lg shadow-cyan-900/20 active:scale-95">
              <FileDown size={18} /> Export Executive Report
          </button>
-      </div> */}
+      </div>
       <div className="mt-2">
         <BriefingCard />
       </div>
