@@ -113,8 +113,8 @@ export const generateReport = (attacks: Attack[], ips: MaliciousIP[], briefing: 
       doc.setPage(i);
       doc.setFontSize(8);
       doc.setTextColor(150);
-      doc.text(`Page ${i} of ${pageCount} | CONFIDENTIAL | DeepCytes Platform`, 105, 290, { align: "center" });
+      doc.text(`Page ${i} of ${pageCount} | CONFIDENTIAL | LCTM Platform`, 105, 290, { align: "center" });
   }
 
-  doc.save(`DeepCytes_Report_${date.replace(/\//g, '-')}.pdf`);
+  doc.save(`LCTM_Report_${date.replace(/\//g, '-')}.pdf`);
 };
